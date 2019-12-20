@@ -19,7 +19,7 @@ class App extends React.Component {
   getMore(clickCheckBox) {
     const {todolists, currentIdx, currentEndIdx, fetchItems, currentOutput} = this.state;
     const loadingCount = clickCheckBox ? currentEndIdx : fetchItems;
-   	for (let i=0; (i< loadingCount && currentIdx + i<todolists.length); i++) {
+    for (let i=0; (i< loadingCount && currentIdx + i<todolists.length); i++) {
       const todolist = todolists[currentIdx + i];
      	currentOutput.push(
         <div key={currentIdx + i}>
@@ -56,7 +56,7 @@ class App extends React.Component {
   }
   
   render() {
-  	const {todolists, currentOutput} = this.state;
+    const {todolists, currentOutput} = this.state;
     const style = {
      	color: 'white',
       width: '120px',
