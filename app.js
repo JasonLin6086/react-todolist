@@ -1,12 +1,12 @@
 class App extends React.Component {
-	constructor(props) {
-  	super(props);
-  	this.state = {
-        todolists: props.todolists,
-        fetchItems: 5,
-        currentIdx: 0,
-        currentEndIdx: 0,
-        currentOutput: [],
+    constructor(props) {
+    super(props);
+    this.state = {
+      todolists: props.todolists,
+      fetchItems: 5,
+      currentIdx: 0,
+      currentEndIdx: 0,
+      currentOutput: [],
     };
     this.onClick = this.onClick.bind(this);
     this.getMore = this.getMore.bind(this);
@@ -19,7 +19,7 @@ class App extends React.Component {
   getMore(clickCheckBox) {
     const {todolists, currentIdx, currentEndIdx, fetchItems, currentOutput} = this.state;
     const loadingCount = clickCheckBox ? currentEndIdx : fetchItems;
-    for (let i=0; (i< loadingCount && currentIdx + i<todolists.length); i++) {
+    for (let i=0; (i< loadingCount && currentIdx + i < todolists.length); i++) {
       const todolist = todolists[currentIdx + i];
      	currentOutput.push(
         <div key={currentIdx + i}>
@@ -58,7 +58,7 @@ class App extends React.Component {
   render() {
     const {todolists, currentOutput} = this.state;
     const style = {
-     	color: 'white',
+      color: 'white',
       width: '120px',
       marginTop: '20px',
       height: '30px',
